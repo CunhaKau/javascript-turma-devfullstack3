@@ -58,3 +58,4 @@ switch (idade){
     default:
     console.log("Idade inválida");
 }
+

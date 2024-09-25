@@ -19,8 +19,41 @@ const output = document.getElementById('output');
 //});
 
 
-//adicionando o evento keydown ao campo de entrada
+//adicionando o evento keyup ao campo de entrada
 inputField.addEventListener("keyup", function(event){
     //Exibir qual a tecla foi liberada
     output.textContent = `Você pressionou: ${event.key}`;
     });
+
+    //outros eventos de mouse
+    const eventosMouse = document.querySelector("#mouse");
+
+    eventosMouse.addEventListener("mousedown", () => {
+        console.log("Pressionou o botão do mouse");
+    });
+
+    eventosMouse.addEventListener("mouseup", () =>{
+        console.log("Soltou o botão do mouse");
+    });
+
+    eventosMouse.addEventListener("dblclick", () => {
+        console.log("Duplo click");
+    });
+
+    //movimento do mouse
+    eventosMouse.addEventListener("mousemove", (e) => {
+        //console.log(`Mouse no eixo x: ${e.x}`);
+        //console.log(`Mouse no eixo y: ${e.y}`);
+    });
+
+    //focus e blur
+    const input = document.querySelector("#meu-input");
+
+    input.addEventListener("focus", (e) => {
+        console.log("Entrou no input");
+    });
+
+    input.addEventListener("blur", (e) => {
+        console.log("Saiu do input");
+    });
+
